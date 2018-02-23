@@ -1,0 +1,12 @@
+.help-close-button {
+  background-color: #1F253D;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  color: #95A5A6;
+}

@@ -1,0 +1,20 @@
+.guess-input {
+  background: #50597B;
+  font-size: 2.8em;
+  width: 80%;
+  height: 75px;
+  margin: 0 auto;
+  border: 1px #1F253D solid;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 40px;
+  color: #FFFFFF;
+}
+
+.guess-input::placeholder {
+  color: #95A5A6;
+}
+
+.guess-input:focus {
+  outline: none;
+}

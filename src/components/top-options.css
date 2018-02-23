@@ -1,0 +1,16 @@
+.top-options h2 {
+  color: #FFFFFF;
+  margin: 20px;
+}
+
+.help-link, .new-game-link {
+  cursor: pointer;
+}
+
+.help-link {
+  float: left;
+}
+
+.new-game-link {
+  float: right;
+}

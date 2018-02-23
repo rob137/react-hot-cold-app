@@ -1,0 +1,20 @@
+.guess-button {
+  background-color: #1F253D;
+  border: none;
+  color: #95A5A6;
+  width: 80%;
+  height: 75px;
+  font-size: 2.8em;
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.guess-button:hover {
+  background-color: #E64C65;
+  color: #FFFFFF;
+  transition-duration: 0.5s;
+}
+
+.guess-button:focus {
+  outline: none;
+}

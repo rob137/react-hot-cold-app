@@ -1,0 +1,14 @@
+.answer-so-far {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  background-color: #1A4E95;
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-size: 1.4em;
+  padding: 6px;
+  margin-left: 10px;
+  text-align: center;
+}
