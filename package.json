@@ -2,7 +2,7 @@
   "name": "hot-cold-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://rob137.github.io/react-hot-cold",
+  "homepage": "https://rob137.github.io/react-hot-cold-app/",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
