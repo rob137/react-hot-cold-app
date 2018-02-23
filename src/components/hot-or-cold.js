@@ -2,7 +2,6 @@ import React from 'react';
 import TopOptions from './top-options';
 import QuizArea from './quiz-area';
 import HelpPanel from './help-panel';
-import './hot-or-cold.css';
 
 export default class HotOrCold extends React.Component {
   constructor(props) {
@@ -64,7 +63,6 @@ export default class HotOrCold extends React.Component {
   }
 
   checkGuessIsValid(guessNum) {
-    console.log(guessNum);
     return ( 
       guessNum.length < 1
       || typeof guessNum !== 'number'
