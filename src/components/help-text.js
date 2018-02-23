@@ -9,7 +9,7 @@ export default function HelpText() {
       <ol>
         <li>I pick a 
           <span className="underline"> random secret number </span> 
-          between1 to 100 and keep it hidden.</li>
+          from 1 to 99 and keep it hidden.</li>
         <li>You need to
           <span className="underline"> guess </span> 
           until you can find the hidden secret number.</li>
