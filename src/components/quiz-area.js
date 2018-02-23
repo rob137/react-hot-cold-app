@@ -7,20 +7,24 @@ import AnswersSoFar from './answers-so-far';
 import './quiz-area.css';
 
 export default function QuizArea(props) {
+  const answerLis = props.guessesSoFar.map((guess,index) => {
+    return <AnswersSoFar guess={guess} key={index}/>
+  })
+  
   return (
     <main>
       <h1>HOT or COLD</h1>
       <div>
         <section className="clue-text-wrapper">
-          <ClueText />
+          <ClueText clueText={props.clueText}/>
         </section>
         <section className="input-area-wrapper">
-          <GuessInput /> <br/>
-          <GuessButton onClick={(e) => props.addGuess(e)}/> <br/>
-          <GuessCount />
+          <GuessInput onChange={(value) => props.getInput(value)}/> <br/>
+          <GuessButton onClick={() => props.handleGuess()}/> <br/>
+          <GuessCount totalGuesses={props.totalGuesses}/>
         </section>
         <section className="answers-so-far-wrapper">
-          <AnswersSoFar />
+          <ul>{answerLis}</ul>
         </section>
       </div>
     </main>

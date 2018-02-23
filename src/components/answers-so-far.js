@@ -1,12 +1,8 @@
 import React from 'react';
 import './answers-so-far.css';
 
-export default function AnswersSoFar(prop) {
+export default function AnswersSoFar(props) {
   return (
-    <li className="answer-so-far">{prop.answer}</li>
+    <li className="answer-so-far">{props.guess}</li>
   )
-}
-
-AnswersSoFar.defaultProps = {
-  answer: ''
 }
