@@ -9,7 +9,7 @@ export default class HotOrCold extends React.Component {
     this.state = {
       showHelp: false,
       guessesSoFar: [],
-      currentInput: 0,
+      currentInput: '',
       rightAnswer: Math.floor(Math.random() * 99 + 1),
       clueText: 'Make your guess!'
     }
@@ -62,21 +62,11 @@ export default class HotOrCold extends React.Component {
     this.checkWarmth(guessNum);
   }
 
-  checkGuessIsValid(guessNum) {
-    return ( 
-      guessNum.length < 1
-      || typeof guessNum !== 'number'
-      || guessNum < 1 
-      || guessNum > 99 
-    );
-  }
-
   // On clicking 'guess'
-  handleGuess(guessNum) {
+  handleGuess() {
+    const guessNum = this.state.currentInput;
     const parsedGuess = parseInt(guessNum, 10);
-    if (this.checkGuessIsValid(Number(guessNum))) {
-      alert('Please enter a number from 1 to 99');
-    } else if (!this.checkGuessIsUnique(parsedGuess)) {
+    if (!this.checkGuessIsUnique(parsedGuess)) {
       alert('You guessed this number already');
     } else {
       this.handleValidGuess(parsedGuess);
@@ -84,14 +74,15 @@ export default class HotOrCold extends React.Component {
   }
 
   // Updates state with current text in input field
-  getInput(value) {
-    this.setState({ currentInput: value});
+  setInput(value) {
+    console.log(value);
+    if (!isNaN(value)) { 
+      this.setState({ currentInput: value});
+    }
   }
 
   render() {
-    const input = this.state.currentInput;
     if(this.state.showHelp) {
-
       return (
         <div className="outer-container">
           <HelpPanel toggleHelp={() => this.toggleHelp()}/>
@@ -105,8 +96,9 @@ export default class HotOrCold extends React.Component {
             resetGame={() => this.resetGame()}/>
           <QuizArea 
             clueText={this.state.clueText}
-            getInput={(value) => this.getInput(value)}
-            handleGuess={() => this.handleGuess(input)}
+            setInput={(value) => this.setInput(value)}
+            inputValue={this.state.currentInput}
+            handleGuess={this.handleGuess.bind(this)}
             totalGuesses={this.state.guessesSoFar.length}
             guessesSoFar={this.state.guessesSoFar}/>
         </div>

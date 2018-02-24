@@ -6,6 +6,7 @@ export default function GuessInput(props) {
     <input className="guess-input" 
       placeholder="Enter your Guess" 
       onChange={ e => props.onChange(e.target.value)}
+      value={props.inputValue}
       onKeyPress={
         (event) => {
           if (event.key === 'Enter') {

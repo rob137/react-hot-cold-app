@@ -20,7 +20,8 @@ export default function QuizArea(props) {
         </section>
         <section className="input-area-wrapper">
           <GuessInput 
-            onChange={(value) => props.getInput(value)}
+            onChange={(value) => props.setInput(value)}
+            inputValue={props.inputValue}
             onKeyPress={() => props.handleGuess()}/> <br/>
           <GuessButton onClick={() => props.handleGuess()}/> <br/>
           <GuessCount totalGuesses={props.totalGuesses}/>
