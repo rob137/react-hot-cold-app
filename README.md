@@ -1,0 +1,1 @@
+Re-work of [this jQuery app](https://thinkful-ed.github.io/hot-or-cold-demo/) as an exercise in building something with React.
